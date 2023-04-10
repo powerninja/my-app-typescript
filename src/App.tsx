@@ -9,6 +9,9 @@ type User = {
   personalColor: string;
 };
 
+//テストデータ
+const addData = { id: 123, name: "shiro", age: 23, personalColor: "bule" };
+
 export const App = () => {
   const [users, setUsers] = useState<User[]>([]);
 
@@ -17,6 +20,8 @@ export const App = () => {
       setUsers(res.data);
     });
   }, []);
+
+  users.push(addData);
 
   return (
     <div>
