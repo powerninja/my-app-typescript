@@ -9,10 +9,10 @@ import type { User } from "../types/user";
 
 export const ListItem: FC<User> = (props) => {
   //personalColorにデフォルト値を設定
-  const { id, name, age, personalColor } = props;
+  const { id, name, age, personalColor, hobbies } = props;
   return (
     <p style={{ color: personalColor }}>
-      {id} : {name}({age})
+      {id} : {name}({age}) {hobbies?.join(" / ")}
     </p>
   );
 };

@@ -5,4 +5,5 @@ export type User = {
   //ここに記載すると、personalColorが設定されないとエラーとなってしまう
   //変数の後ろに?を追加する子で、プロパティを省略可能となる
   personalColor?: string;
+  hobbies?: string[];
 };
