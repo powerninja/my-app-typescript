@@ -10,7 +10,9 @@ type User = {
 };
 
 //テストデータ
-const addData = { id: 123, name: "shiro", age: 23, personalColor: "bule" };
+const addData = { id: 1, name: "shiro", age: 23, personalColor: "red" };
+const addData1 = { id: 2, name: "kuro", age: 26, personalColor: "blue" };
+const addData2 = { id: 3, name: "ao", age: 28, personalColor: "yellow" };
 
 export const App = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -22,11 +24,18 @@ export const App = () => {
   }, []);
 
   users.push(addData);
+  users.push(addData1);
+  users.push(addData2);
 
   return (
     <div>
       {users.map((user) => (
-        <ListItem id={user.id} name={user.name} age={user.age}></ListItem>
+        <ListItem
+          id={user.id}
+          name={user.name}
+          age={user.age}
+          personalColor={user.personalColor}
+        ></ListItem>
       ))}
     </div>
   );
